@@ -19,8 +19,9 @@ Run on **1 October 2026**. Everything here (code, the 30 test claims, raw output
 ## Why I tested this
 
 A lot of production "AI steps" aren't writing anything. They're decisions: approve or reject, which queue, escalate or not.
-The usual way to do that today is to send the context to an LLM and ask for a structured output (JSON with a label).
-That works, but every call is a full text-generation pass, and the LLM's "confidence" is just another number it writes.
+A common way to handle them is to send the context to an LLM and ask for a structured output (JSON with a label).
+That works, but the LLM still generates its answer token by token, and if you ask it how confident it is, that confidence is just another number it writes.
+(Some APIs can return token probabilities instead, but not every model supports them, and they aren't trained to be calibrated.)
 
 In September 2026, TypeSafe AI released **Jev**, a "System One" model that doesn't generate text at all: you send a state and typed
 questions, and it returns probabilities for each answer in one pass. Two weeks later, OpenAI announced a Decisions API aimed at the same need.
