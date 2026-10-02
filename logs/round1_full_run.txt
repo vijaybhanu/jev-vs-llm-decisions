@@ -1,0 +1,102 @@
+PS C:\...\jev-test> python compare.py --cases cases.csv --workers 1
+Running jev on 30 cases...
+  [jev] 1/30 case 1: approve ✓ (conf 0.39, 319 ms)
+  [jev] 2/30 case 2: needs_clarification ✓ (conf 0.44, 130 ms)
+  [jev] 3/30 case 3: needs_clarification ✗ (conf 0.39, 149 ms)
+  [jev] 4/30 case 4: approve ✓ (conf 0.86, 134 ms)
+  [jev] 5/30 case 5: reject ✗ (conf 0.68, 172 ms)
+  [jev] 6/30 case 6: reject ✓ (conf 0.98, 166 ms)
+  [jev] 7/30 case 7: reject ✓ (conf 0.99, 133 ms)
+  [jev] 8/30 case 8: approve ✓ (conf 0.86, 181 ms)
+  [jev] 9/30 case 9: reject ✗ (conf 0.80, 132 ms)
+  [jev] 10/30 case 10: reject ✓ (conf 1.00, 121 ms)
+  [jev] 11/30 case 11: approve ✓ (conf 0.69, 138 ms)
+  [jev] 12/30 case 12: approve ✓ (conf 0.93, 138 ms)
+  [jev] 13/30 case 13: reject ✓ (conf 0.94, 191 ms)
+  [jev] 14/30 case 14: reject ✗ (conf 0.88, 130 ms)
+  [jev] 15/30 case 15: reject ✓ (conf 0.99, 147 ms)
+  [jev] 16/30 case 16: approve ✓ (conf 0.68, 147 ms)
+  [jev] 17/30 case 17: approve ✓ (conf 0.43, 130 ms)
+  [jev] 18/30 case 18: needs_clarification ✓ (conf 0.71, 167 ms)
+  [jev] 19/30 case 19: approve ✓ (conf 0.96, 172 ms)
+  [jev] 20/30 case 20: reject ✓ (conf 1.00, 154 ms)
+  [jev] 21/30 case 21: approve ✓ (conf 0.86, 116 ms)
+  [jev] 22/30 case 22: needs_clarification ✓ (conf 0.86, 221 ms)
+  [jev] 23/30 case 23: approve ✗ (conf 0.24, 129 ms)
+  [jev] 24/30 case 24: approve ✓ (conf 0.59, 131 ms)
+  [jev] 25/30 case 25: reject ✓ (conf 0.96, 191 ms)
+  [jev] 26/30 case 26: needs_clarification ✓ (conf 0.88, 188 ms)
+  [jev] 27/30 case 27: approve ✓ (conf 0.94, 130 ms)
+  [jev] 28/30 case 28: needs_clarification ✓ (conf 0.92, 156 ms)
+  [jev] 29/30 case 29: reject ✓ (conf 0.80, 140 ms)
+  [jev] 30/30 case 30: reject ✗ (conf 0.15, 154 ms)
+Running openai on 30 cases...
+  [openai] 1/30 case 1: approve ✓ (conf 0.95, 931 ms)
+  [openai] 2/30 case 2: needs_clarification ✓ (conf 0.96, 307 ms)
+  [openai] 3/30 case 3: approve ✓ (conf 0.99, 643 ms)
+  [openai] 4/30 case 4: approve ✓ (conf 0.98, 596 ms)
+  [openai] 5/30 case 5: reject ✗ (conf 0.99, 358 ms)
+  [openai] 6/30 case 6: reject ✓ (conf 0.99, 407 ms)
+  [openai] 7/30 case 7: reject ✓ (conf 1.00, 679 ms)
+  [openai] 8/30 case 8: approve ✓ (conf 0.95, 419 ms)
+  [openai] 9/30 case 9: reject ✗ (conf 0.95, 460 ms)
+  [openai] 10/30 case 10: reject ✓ (conf 0.99, 381 ms)
+  [openai] 11/30 case 11: approve ✓ (conf 0.95, 395 ms)
+  [openai] 12/30 case 12: approve ✓ (conf 0.99, 489 ms)
+  [openai] 13/30 case 13: reject ✓ (conf 0.99, 473 ms)
+  [openai] 14/30 case 14: reject ✗ (conf 0.99, 882 ms)
+  [openai] 15/30 case 15: reject ✓ (conf 0.99, 544 ms)
+  [openai] 16/30 case 16: approve ✓ (conf 0.96, 555 ms)
+  [openai] 17/30 case 17: approve ✓ (conf 0.98, 634 ms)
+  [openai] 18/30 case 18: approve ✗ (conf 0.90, 612 ms)
+  [openai] 19/30 case 19: approve ✓ (conf 0.99, 648 ms)
+  [openai] 20/30 case 20: reject ✓ (conf 1.00, 3537 ms)
+  [openai] 21/30 case 21: approve ✓ (conf 0.90, 4584 ms)
+  [openai] 22/30 case 22: needs_clarification ✓ (conf 0.90, 1418 ms)
+  [openai] 23/30 case 23: reject ✓ (conf 0.98, 1679 ms)
+  [openai] 24/30 case 24: approve ✓ (conf 0.95, 3503 ms)
+  [openai] 25/30 case 25: reject ✓ (conf 0.99, 3600 ms)
+  [openai] 26/30 case 26: needs_clarification ✓ (conf 0.90, 4349 ms)
+  [openai] 27/30 case 27: approve ✓ (conf 0.95, 3398 ms)
+  [openai] 28/30 case 28: reject ✗ (conf 0.95, 799 ms)
+  [openai] 29/30 case 29: reject ✓ (conf 0.99, 618 ms)
+  rate limited, waiting 20s...
+  [openai] 30/30 case 30: approve ✓ (conf 0.95, 933 ms)
+# Jev vs LLM structured outputs
+
+| Metric | Jev (jev-latest) | OpenAI (openai/gpt-oss-120b) |
+|---|---|---|
+| Cases | 30 | 30 |
+| Accuracy | 80% | 83% |
+| Median latency | 147 ms | 639 ms |
+| p95 latency | 221 ms | 4349 ms |
+| Cost / 1,000 decisions | $0.0200 | $0.3916 |
+| Avg confidence when right | 0.819 | 0.967 |
+| Avg confidence when wrong | 0.523 | 0.956 |
+| Distinct confidence values | 19 | 6 |
+
+## Auto-decide above a confidence threshold, send the rest to a human
+
+**Jev (jev-latest)**
+
+| Threshold | Auto-decided | Accuracy on auto | Sent to human |
+|---|---|---|---|
+| ≥ 0.6 | 77% | 87% | 23% |
+| ≥ 0.7 | 67% | 90% | 33% |
+| ≥ 0.8 | 63% | 89% | 37% |
+| ≥ 0.9 | 37% | 100% | 63% |
+| ≥ 0.95 | 23% | 100% | 77% |
+
+**OpenAI (openai/gpt-oss-120b)**
+
+| Threshold | Auto-decided | Accuracy on auto | Sent to human |
+|---|---|---|---|
+| ≥ 0.6 | 100% | 83% | 0% |
+| ≥ 0.7 | 100% | 83% | 0% |
+| ≥ 0.8 | 100% | 83% | 0% |
+| ≥ 0.9 | 100% | 83% | 0% |
+| ≥ 0.95 | 87% | 85% | 13% |
+
+_Bigger gap between 'confidence when right' and 'when wrong' = more useful confidence. A model whose accuracy climbs as you raise the threshold can safely automate the confident cases._
+
+Wrote results.csv, summary.json, report.md

@@ -1,0 +1,7 @@
+cache_*.jsonl
+__pycache__/
+results_*.csv
+summary_*.json
+report_*.md
+small.csv
+.env

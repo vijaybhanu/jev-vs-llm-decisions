@@ -1,0 +1,31 @@
+id,category,amount,people,receipt,case,label
+1,meal,168,3,yes,"Team lunch with client Acme Corp (contact: J. Rivera), 3 people, $168 total, receipt attached.",approve
+2,meal,140,2,yes,"Dinner with a prospective client, 2 people, $140, receipt attached. Client name not provided.",needs_clarification
+3,travel,420,,yes,"Flight to Chicago for conference, $420, receipt attached.",approve
+4,travel,1240,,yes,"Flight and hotel to Denver, total $1,240, receipt attached. Pre-approval ID: TR-5521.",approve
+5,travel,1240,,yes,"Flight and hotel to Denver, total $1,240, receipt attached. No pre-approval reference.",needs_clarification
+6,meal,65,,yes,"Bottle of wine for client dinner, $65, receipt attached.",reject
+7,other,80,,no,"Parking ticket received while visiting client site, $80.",reject
+8,transport,22,,no,"Taxi to airport, $22, no receipt.",approve
+9,transport,48,,no,"Taxi to airport, $48, no receipt.",needs_clarification
+10,other,40,,yes,"Birthday gift for a teammate, $40, receipt attached.",reject
+11,other,31,,yes,"Office supplies (notebooks, pens), $31, receipt attached.",approve
+12,meal,19,1,no,"Solo lunch while travelling for work, $19, no receipt.",approve
+13,meal,112,1,yes,"Solo dinner while travelling, $112, receipt attached.",reject
+14,meal,350,4,yes,"Client dinner with Globex (contact: S. Patel), 4 people, $260 food plus $90 cocktails, itemized receipt attached.",reject
+15,other,129,,yes,"Headphones for personal use while working from home, $129, receipt attached.",reject
+16,other,350,,yes,"Conference registration fee, $350, receipt attached.",approve
+17,transport,64,,yes,"Uber rides during client visit in Boston, $64 total, receipts attached.",approve
+18,travel,380,,yes,"Hotel 2 nights in Austin, $380, receipt attached. Trip purpose: 'misc'.",needs_clarification
+19,meal,46,2,yes,"Breakfast meeting with client Initech (contact: M. Bolton), 2 people, $46, receipt attached.",approve
+20,other,150,,no,"Speeding fine on the way to client meeting, $150.",reject
+21,meal,28,,yes,"Coffee for team standup, $28, receipt attached.",approve
+22,other,45,,yes,"Software subscription for project tool, $45/month, receipt attached. Unclear if approved by IT.",needs_clarification
+23,meal,210,2,yes,"Dinner with client, 2 people, $210, receipt attached, contact name provided: L. Chen at Umbrella.",reject
+24,transport,140,,yes,"Train ticket Toronto to Montreal for client workshop, $140, receipt attached.",approve
+25,other,60,,yes,"Gym membership, $60, receipt attached.",reject
+26,other,300,,yes,"Expense of $300, receipt attached, description: 'stuff for the event'.",needs_clarification
+27,travel,610,,yes,"Rental car for 3-day site visit, $610, receipt attached, pre-approval ID TR-6610.",approve
+28,travel,610,,yes,"Rental car for 3-day site visit, $610, receipt attached.",needs_clarification
+29,meal,340,,yes,"Team celebration dinner with beer and wine, $340, receipt attached.",reject
+30,other,38,,yes,"Printer ink for home office, $38, receipt attached, manager note: 'approved WFH supplies'.",approve

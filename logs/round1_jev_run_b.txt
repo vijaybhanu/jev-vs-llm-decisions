@@ -1,0 +1,70 @@
+PS C:\...\jev-test> python compare.py --cases cases.csv --workers 1
+Running jev on 30 cases...
+  [jev] 1/30 case 1: approve ✓ (conf 0.41, 238 ms)
+  [jev] 2/30 case 2: needs_clarification ✓ (conf 0.49, 126 ms)
+  [jev] 3/30 case 3: needs_clarification ✗ (conf 0.29, 123 ms)
+  [jev] 4/30 case 4: approve ✓ (conf 0.89, 221 ms)
+  [jev] 5/30 case 5: reject ✗ (conf 0.71, 142 ms)
+  [jev] 6/30 case 6: reject ✓ (conf 0.96, 158 ms)
+  [jev] 7/30 case 7: reject ✓ (conf 0.99, 162 ms)
+  [jev] 8/30 case 8: approve ✓ (conf 0.87, 137 ms)
+  [jev] 9/30 case 9: reject ✗ (conf 0.81, 128 ms)
+  [jev] 10/30 case 10: reject ✓ (conf 1.00, 142 ms)
+  [jev] 11/30 case 11: approve ✓ (conf 0.72, 194 ms)
+  [jev] 12/30 case 12: approve ✓ (conf 0.93, 175 ms)
+  [jev] 13/30 case 13: reject ✓ (conf 0.93, 131 ms)
+  [jev] 14/30 case 14: reject ✗ (conf 0.85, 123 ms)
+  [jev] 15/30 case 15: reject ✓ (conf 0.99, 135 ms)
+  [jev] 16/30 case 16: approve ✓ (conf 0.71, 142 ms)
+  [jev] 17/30 case 17: approve ✓ (conf 0.31, 129 ms)
+  [jev] 18/30 case 18: needs_clarification ✓ (conf 0.57, 143 ms)
+  [jev] 19/30 case 19: approve ✓ (conf 0.94, 135 ms)
+  [jev] 20/30 case 20: reject ✓ (conf 1.00, 188 ms)
+  [jev] 21/30 case 21: approve ✓ (conf 0.85, 134 ms)
+  [jev] 22/30 case 22: needs_clarification ✓ (conf 0.88, 143 ms)
+  [jev] 23/30 case 23: reject ✓ (conf 0.26, 164 ms)
+  [jev] 24/30 case 24: approve ✓ (conf 0.64, 118 ms)
+  [jev] 25/30 case 25: reject ✓ (conf 0.97, 123 ms)
+  [jev] 26/30 case 26: needs_clarification ✓ (conf 0.88, 134 ms)
+  [jev] 27/30 case 27: approve ✓ (conf 0.95, 151 ms)
+  [jev] 28/30 case 28: needs_clarification ✓ (conf 0.91, 119 ms)
+  [jev] 29/30 case 29: reject ✓ (conf 0.88, 141 ms)
+  [jev] 30/30 case 30: reject ✗ (conf 0.12, 132 ms)
+Running openai on 30 cases...
+  [openai] 1/30 case 1: approve ✓ (conf 0.98, 14279 ms)
+Traceback (most recent call last):
+  File "C:\...\jev-test\compare.py", line 277, in <module>
+    main()
+    ~~~~^^
+  File "C:\...\jev-test\compare.py", line 256, in main
+    results = [tracked(c) for c in cases]
+               ~~~~~~~^^^
+  File "C:\...\jev-test\compare.py", line 249, in tracked
+    r = fn(c)
+  File "C:\...\jev-test\compare.py", line 242, in <lambda>
+    runners["openai"] = lambda c: call_openai(c["case"], oc)
+                                  ~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\...\jev-test\compare.py", line 99, in call_openai
+    r = client.chat.completions.create(
+        model=OPENAI_MODEL,
+    ...<2 lines>...
+                         "json_schema": {"name": "decision", "strict": True, "schema": OPENAI_SCHEMA}},
+    )
+  File "C:\Users\...\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\...\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1318, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<53 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\...\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1440, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\...\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1213, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - [{'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}]
